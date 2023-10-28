@@ -9,3 +9,7 @@ db_password: ""
 
 # HackerNews
 hacker_news_url: "https://hacker-news.firebaseio.com/"
+
+# Redis
+redis_host: "127.0.0.1"
+redis_port: "6379"

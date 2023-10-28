@@ -31,7 +31,7 @@ gem "tailwindcss-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+gem "redis", "~> 5.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -76,7 +76,10 @@ end
 
 gem 'faraday', '~> 2.7'
 gem 'figaro', '~> 1.2'
+gem 'foreman', '~> 0.87.2'
+gem 'sidekiq', '~> 7.1'
 
 group :test do
-  gem "webmock"
+  gem 'mocha', '~> 2.1'
+  gem 'webmock', '~> 3.19'
 end

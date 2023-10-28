@@ -4,6 +4,9 @@ require "rails/test_help"
 
 require 'webmock/minitest'
 require 'minitest/spec'
+require 'sidekiq/testing'
+require 'minitest/unit'
+require 'mocha/minitest'
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
@@ -13,4 +16,5 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  Sidekiq::Testing.fake!
 end

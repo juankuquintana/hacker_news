@@ -17,7 +17,7 @@ $ rails db:setup
 2. Then, you can run the application with the following command.
 
 ```bash
-$ rails s
+$ foreman start
 ```
 
 ## Test
