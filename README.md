@@ -1,24 +1,29 @@
-# README
+# HackerNews Top 10
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple RoR application that displays the top 10 [HackerNews](https://news.ycombinator.com/) stories.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Install the packages and setup the database with:
 
-* System dependencies
+```bash
+$ bundle install
+$ rails db:setup
+```
 
-* Configuration
+## Usage
 
-* Database creation
+1. Copy the config/application.example.yml file and set the environment variables.
+2. Then, you can run the application with the following command.
 
-* Database initialization
+```bash
+$ rails s
+```
 
-* How to run the test suite
+## Test
 
-* Services (job queues, cache servers, search engines, etc.)
+You can run the test suite with the following command:
 
-* Deployment instructions
-
-* ...
+```bash
+$ rails test
+```
