@@ -20,6 +20,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= Figaro.env.db_host %>
+  port: <%= Figaro.env.db_port %>
+  username: <%= Figaro.env.db_username %>
 
 development:
   <<: *default
@@ -81,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: hacker_news_production
-  username: hacker_news
-  password: <%= ENV["HACKER_NEWS_DATABASE_PASSWORD"] %>
+  database: <%= Figaro.env.db_name %>
+  username: <%= Figaro.env.db_username %>
+  password: <%= Figaro.env.db_password %>
