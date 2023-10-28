@@ -74,4 +74,9 @@ group :test do
 
 end
 
+gem 'faraday', '~> 2.7'
 gem 'figaro', '~> 1.2'
+
+group :test do
+  gem "webmock"
+end

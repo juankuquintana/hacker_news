@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 28 Oct 2023 19:46:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 350
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+
+{"by":"selvan","descendants":30,"id":38050106,"kids":[38052782,38052018,38050480,38052551,38051538,38052296,38051993,38050711,38050629,38052228,38050890,38051870,38050301,38051461],"score":181,"time":1698503579,"title":"MagicaVoxel A free voxel art editor and interactive path tracing renderer","type":"story","url":"https://ephtracy.github.io/"}

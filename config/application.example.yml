@@ -1,7 +1,11 @@
 # config/application.yml
 
+# Database
 db_host: "localhost"
 db_port: "5432"
 db_name: ""
 db_username: "postgres"
 db_password: ""
+
+# HackerNews
+hacker_news_url: "https://hacker-news.firebaseio.com/"
