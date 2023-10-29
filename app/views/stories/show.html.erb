@@ -1,0 +1,31 @@
+<h2 class="text-lg font-mono font-bold">
+  <%= @story.title %>
+</h2>
+<div class="flex flex-col max-w-3xl">
+  <div class="text-sm grid grid-cols-4 text-center">
+    <span><%= Time.at(@story.time).utc %></span>
+    <span>@<%= @story.author %></span>
+    <span class="mb-5 hover:underline">
+      <%= link_to "See link", @story.url %>
+    </span>
+    <span class="mb-5 hover:underline ">
+      <%= link_to "See HN post", "https://news.ycombinator.com/item?id=#{@story.reference_id}" %>
+    </span>
+  </div>
+  <ul class="flex flex-col justify-center">
+    <% @comments.each do |comment| %>
+      <li class="font-mono mb-5">
+        <div class="text-sm	bg-indigo-100 rounded-md px-4 py-4">
+          <%= raw(comment.content) %>
+        </div>
+        <div class="grid grid-cols-2 text-xs">
+          <span><%= Time.at(comment.time).utc %></span>
+          <span class="text-right">@<%= comment.author %></span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<span class="mb-5 hover:underline">
+  <%= link_to "Go back", stories_path %>
+</span>

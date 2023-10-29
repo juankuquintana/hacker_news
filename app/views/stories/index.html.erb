@@ -1,0 +1,26 @@
+<p><%= flash[:alert] %></p>
+<div class="mb-10 font-mono text-center">
+  <h2 class="text-lg font-bold">HackerNews Top 10</h2>
+  <%= link_to "Refresh ranking", refresh_stories_path, class: "text-xs" %>
+</div>
+<ul class="justify-center">
+  <% @stories.each do |story| %>
+    <li class="font-mono hover:cursor-pointer hover:bg-indigo-100 rounded-md px-4 py-4">
+      <div class="flex justify-between">
+        <h1 class="flex items-center mr-10 text-lg font-bold"><%= story.rank + 1 %></h1>
+        <div class="flex flex-row grow">
+          <%= link_to story_path(story), class: "grow" do %>
+            <div class="text-base">
+              <h2><%= story.title %></h2>
+            </div>
+            <div class="text-sm grid grid-cols-3">
+              <span class="text-left"><%= Time.at(story.time).utc %></span>
+              <span class="text-center"><%= story.comments.size %> comments</span>
+              <span class="text-right">@<%= story.author %></span>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>
