@@ -15,7 +15,7 @@
   <ul class="flex flex-col justify-center">
     <% @comments.each do |comment| %>
       <li class="font-mono mb-5">
-        <div class="text-sm	bg-indigo-100 rounded-md px-4 py-4">
+        <div class="text-sm	bg-indigo-100 rounded-md px-4 py-4 overflow-auto">
           <%= raw(comment.content) %>
         </div>
         <div class="grid grid-cols-2 text-xs">

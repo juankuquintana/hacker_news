@@ -7,7 +7,7 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
-    @comments = StoriesRepository.new.story_active_comments
+    @comments = StoriesRepository.new.story_active_comments(params[:id])
   end
 
   def refresh
