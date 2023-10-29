@@ -77,7 +77,7 @@ end
 gem 'faraday', '~> 2.7'
 gem 'figaro', '~> 1.2'
 gem 'foreman', '~> 0.87.2'
-gem 'sidekiq', '~> 7.1'
+gem 'sidekiq', '~> 6.5'
 
 group :test do
   gem 'mocha', '~> 2.1'
