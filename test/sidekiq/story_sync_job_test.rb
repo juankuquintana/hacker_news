@@ -13,7 +13,7 @@ class StorySyncJobTest < Minitest::Test
     it "delegates to StoryCreator" do
       StoryCreator.any_instance.expects(:call).once
 
-      StorySyncJob.new.perform(id)
+      StorySyncJob.new.perform(id, 1)
     end
   end
 end

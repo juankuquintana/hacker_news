@@ -3,8 +3,8 @@ class StorySyncJob
 
   sidekiq_options retry: 0
 
-  def perform(id)
+  def perform(id, rank)
     story = HackerNews::Actions::Item.new.call(id)
-    StoryCreator.new.call(story)
+    StoryCreator.new.call(story, rank)
   end
 end

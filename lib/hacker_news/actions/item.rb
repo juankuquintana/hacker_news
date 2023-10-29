@@ -19,7 +19,7 @@ module HackerNews
             dead: response.body["dead"],
             parent: response.body["parent"],
             poll: response.body["poll"],
-            kids: response.body["kids"],
+            kids: response.body["kids"] || [],
             url: response.body["url"],
             score: response.body["score"],
             title: response.body["title"],

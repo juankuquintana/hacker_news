@@ -1,0 +1,15 @@
+one:
+  reference_id: 1
+  content: MyText
+  time:
+  author: MyString
+  metadata:
+  story: one
+
+two:
+  reference_id: 1
+  content: MyText
+  time:
+  author: MyString
+  metadata:
+  story: two
