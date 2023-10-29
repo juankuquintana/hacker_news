@@ -2,11 +2,12 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 
-require 'webmock/minitest'
+require 'database_cleaner/active_record'
 require 'minitest/spec'
-require 'sidekiq/testing'
 require 'minitest/unit'
 require 'mocha/minitest'
+require 'sidekiq/testing'
+require 'webmock/minitest'
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
@@ -17,4 +18,16 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   Sidekiq::Testing.fake!
+end
+
+DatabaseCleaner.strategy = :truncation
+
+class Minitest::Spec
+  before :each do
+    DatabaseCleaner.start
+  end
+
+  after :each do
+    DatabaseCleaner.clean
+  end
 end

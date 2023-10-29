@@ -80,6 +80,8 @@ gem 'foreman', '~> 0.87.2'
 gem 'sidekiq', '~> 6.5'
 
 group :test do
+  gem 'database_cleaner-active_record'
+  gem 'factory_bot_rails', '~> 6.2'
   gem 'mocha', '~> 2.1'
   gem 'webmock', '~> 3.19'
 end

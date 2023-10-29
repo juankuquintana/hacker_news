@@ -87,11 +87,20 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
+    database_cleaner-active_record (2.1.0)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     date (3.3.3)
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     faraday (2.7.11)
       base64
       faraday-net_http (>= 2.0, < 3.1)
@@ -259,7 +268,9 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  database_cleaner-active_record
   debug
+  factory_bot_rails (~> 6.2)
   faraday (~> 2.7)
   figaro (~> 1.2)
   foreman (~> 0.87.2)
